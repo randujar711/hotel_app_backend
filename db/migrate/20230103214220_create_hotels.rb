@@ -2,7 +2,7 @@ class CreateHotels < ActiveRecord::Migration[6.1]
   def change
     create_table :hotels do |t|
       t.string :name
-      t.string :broom_rating
+      t.string :broom_rating, default: 0
       t.text :address
       t.integer :longitude
       t.integer :latitude
