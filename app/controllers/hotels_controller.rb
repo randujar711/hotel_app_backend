@@ -3,6 +3,6 @@ class HotelsController < ApplicationController
         render json: Hotel.all
     end 
     def show 
-        render json: find_by!(id: params[:id])
+        render json: Hotel.find_by!(id: params[:id])
     end
 end

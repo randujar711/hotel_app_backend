@@ -10,12 +10,12 @@ user_ids = []
 hotel_ids = []
 
 5.times do 
-    random_name = Faker::Name.name
     user = User.create!(
-        first_name: random_name.split(' ')[0],
-        last_name: random_name.split(' ')[1],
-        phone: 9173854075,
-        password_digest: '11111111'
+        first_name: Faker::Name.first_name,
+        last_name: Faker::Name.last_name,
+        email: Faker::Internet.email(domain: 'example'),
+        password_digest: Faker::Internet.password(min_length: 10, max_length: 20, mix_case: true, special_characters: true),
+        phone: Faker::PhoneNumber.cell_phone
     )
     user_ids << user.id
 end 
