@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   get 'hotels', to: 'hotels#index'
   get 'hotel/:id', to: 'hotel#show'
+  
   post 'users/', to: 'users#create'
   patch 'users/:id', to: 'users#update'
   delete 'users/:id', to: 'users#destroy'

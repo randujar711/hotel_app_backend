@@ -4,14 +4,16 @@ one:
   name: MyString
   broom_rating: MyString
   address: MyText
-  longitude: 1
-  latitude: 1
+  coordinates: 1
   user_id: 1
+  rooms: 1
+  rooms_available: 1
 
 two:
   name: MyString
   broom_rating: MyString
   address: MyText
-  longitude: 1
-  latitude: 1
+  coordinates: 1
   user_id: 1
+  rooms: 1
+  rooms_available: 1

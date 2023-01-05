@@ -5,9 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-room_ids = []
-user_ids = []
-hotel_ids = []
 
 5.times do 
     user = User.create!(
@@ -17,7 +14,6 @@ hotel_ids = []
         password_digest: Faker::Internet.password(min_length: 10, max_length: 20, mix_case: true, special_characters: true),
         phone: Faker::PhoneNumber.cell_phone
     )
-    user_ids << user.id
 end 
 p "users_created"
 
@@ -26,22 +22,32 @@ p "users_created"
     numbers = (1..99).to_a
     price = (300..3000).to_a
     room = Room.create(
-        hotel_id: hotel_ids.sample, 
-        user_id: user_ids.sample, 
+        hotel_id: Hotel.all.sample, 
+        user_id: User.all.sample, 
         room_number: %(#{numbers.sample}#{letters.sample})
     )
-    room_ids << room.id
 end
+
 p "rooms_created"
 
-2.times do 
-    hotel = Hotel.create!(
-        name: 'sgfadgd', 
-        broom_rating: 5,
-        address: Faker::Address.street_address, 
-        longitude: 23453, 
-        latitude: 3242145
-    )
-    hotel_ids << hotel.id
-end
+
+    hotel = Hotel.create!(name: "Motel 9 3/4", broom_rating: 5, address: Faker::Address.street_address, latitude: "40.752655", longitude: "-73.977296", room_amount: 100, rooms_available: 21)
+
+    hotel1 = Hotel.create!(name: "The Shrieking Shack", broom_rating: 5, address: Faker::Address.street_address, latitude: "41.752655", longitude: "-74.977296", room_amount: 13, rooms_available: 12)
+
+    hotel2 = Hotel.create!(name: "The SlytherInn", broom_rating: 5, address: Faker::Address.street_address, latitude: "46.752655", longitude: "-75.977296", room_amount: 130, rooms_available: 66)
+
+    hotel3 = Hotel.create!(name: "The Leaky Cauldron", broom_rating: 5, address: Faker::Address.street_address, latitude: "-76.977296", longitude: "44.752655", room_amount: 50, rooms_available: 17)
+
+    hotel4 = Hotel.create!(name: "Wizard's Way", broom_rating: 5, address: Faker::Address.street_address, latitude: "-79.977296", longitude: "49.752655", room_amount: 100, rooms_available: 20)
+
+    hotel5 = Hotel.create!(name: "Hagrid's Quality Hut", broom_rating: 5, address: Faker::Address.street_address, latitude: "30.752655", longitude: "-71.977296", room_amount: 200, rooms_available: 0)
+
+    hotel6 = Hotel.create!(name: "The 4 Broomsticks", broom_rating: 5, address: Faker::Address.street_address, latitude: "20.752655", longitude: "-35.977296", room_amount: 150, rooms_available: 0)
+    
+    hotel7 = Hotel.create!(name: "The Night Bus", broom_rating: 5, address: Faker::Address.street_address, latitude: "11.752655", longitude: "-11.977296", room_amount: 150, rooms_available: 10)
+
 p "hotels_created"
+# 10.times do 
+#     reservation = Reservation.create!(active: true, user_id: user_ids.sample, room_id: Room.all.sample, price: 1000, start_time: 1/3/21, hotel_id: Hotel.all.sample)
+# end
