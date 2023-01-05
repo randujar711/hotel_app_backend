@@ -30,22 +30,21 @@ end
 
 p "rooms_created"
 
-
     hotel = Hotel.create!(name: "Motel 9 3/4", broom_rating: 5, address: Faker::Address.street_address, latitude: "40.752655", longitude: "-73.977296", room_amount: 100, rooms_available: 21)
 
-    hotel1 = Hotel.create!(name: "The Shrieking Shack", broom_rating: 5, address: Faker::Address.street_address, latitude: "41.752655", longitude: "-74.977296", room_amount: 13, rooms_available: 12)
+    hotel1 = Hotel.create!(name: "The Shrieking Shack", broom_rating: 5, address: Faker::Address.street_address, latitude: "40.719566", longitude: "-74.006612", room_amount: 13, rooms_available: 12)
 
-    hotel2 = Hotel.create!(name: "The SlytherInn", broom_rating: 5, address: Faker::Address.street_address, latitude: "46.752655", longitude: "-75.977296", room_amount: 130, rooms_available: 66)
+    hotel2 = Hotel.create!(name: "The SlytherInn", broom_rating: 5, address: Faker::Address.street_address, latitude: "40.769862", longitude: "-73.972474", room_amount: 130, rooms_available: 66)
 
-    hotel3 = Hotel.create!(name: "The Leaky Cauldron", broom_rating: 5, address: Faker::Address.street_address, latitude: "-76.977296", longitude: "44.752655", room_amount: 50, rooms_available: 17)
+    hotel3 = Hotel.create!(name: "The Leaky Cauldron", broom_rating: 5, address: Faker::Address.street_address, latitude: "40.705554", longitude: "-74.013444", room_amount: 50, rooms_available: 17)
 
-    hotel4 = Hotel.create!(name: "Wizard's Way", broom_rating: 5, address: Faker::Address.street_address, latitude: "-79.977296", longitude: "49.752655", room_amount: 100, rooms_available: 20)
+    hotel4 = Hotel.create!(name: "Wizard's Way", broom_rating: 5, address: Faker::Address.street_address, latitude: "40.711449", longitude: "-74.013855", room_amount: 100, rooms_available: 20)
 
-    hotel5 = Hotel.create!(name: "Hagrid's Quality Hut", broom_rating: 5, address: Faker::Address.street_address, latitude: "30.752655", longitude: "-71.977296", room_amount: 200, rooms_available: 0)
+    hotel5 = Hotel.create!(name: "Hagrid's Quality Hut", broom_rating: 5, address: Faker::Address.street_address, latitude: "40.71058", longitude: "-73.9264", room_amount: 200, rooms_available: 0)
 
-    hotel6 = Hotel.create!(name: "The 4 Broomsticks", broom_rating: 5, address: Faker::Address.street_address, latitude: "20.752655", longitude: "-35.977296", room_amount: 150, rooms_available: 0)
+    hotel6 = Hotel.create!(name: "The 4 Broomsticks", broom_rating: 5, address: Faker::Address.street_address, latitude: "40.714646", longitude: "-73.996809", room_amount: 150, rooms_available: 0)
     
-    hotel7 = Hotel.create!(name: "The Night Bus", broom_rating: 5, address: Faker::Address.street_address, latitude: "11.752655", longitude: "-11.977296", room_amount: 150, rooms_available: 10)
+    hotel7 = Hotel.create!(name: "The Night Bus", broom_rating: 5, address: Faker::Address.street_address, latitude: "40.779437", longitude: "-73.963244", room_amount: 150, rooms_available: 10)
 
 p "hotels_created"
 # 10.times do 
