@@ -10,4 +10,6 @@ Rails.application.routes.draw do
   post 'users/', to: 'users#create'
   patch 'users/:id', to: 'users#update'
   delete 'users/:id', to: 'users#destroy'
+
+  get '/popups', to: 'hotels#popups'
 end

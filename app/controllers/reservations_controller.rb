@@ -1,6 +1,10 @@
 class ReservationsController < ApplicationController
 
-  def create 
-    ressy = Reservation.create!()
+  def create
+      reservation = Reservation.create!(user_id: 1)
+        ActionCable.server.broadcast('live_feed', {
+          post: reservation
+      })
+      render json: reservation
 
 end
