@@ -7,7 +7,7 @@ class CreateHotels < ActiveRecord::Migration[6.1]
       t.string :latitude
       t.string :longitude
       t.integer :room_amount
-      t.integer :rooms_available
+      t.integer :rooms_available, default: 0
 
       t.timestamps
     end

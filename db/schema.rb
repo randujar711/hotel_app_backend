@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 2023_01_05_161047) do
     t.string "latitude"
     t.string "longitude"
     t.integer "room_amount"
-    t.integer "rooms_available"
+    t.integer "rooms_available", default: 0
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

@@ -5,7 +5,8 @@ Rails.application.routes.draw do
   get 'room/:id', to: 'room#update'
 
   get 'hotels', to: 'hotels#index'
-  get 'hotel/:id', to: 'hotel#show'
+  get 'hotels/:id', to: 'hotels#show'
+  patch 'hotels/:id', to: 'hotels#update'
   
   post 'users/', to: 'users#create'
   patch 'users/:id', to: 'users#update'
